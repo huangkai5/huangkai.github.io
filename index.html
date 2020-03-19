@@ -304,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/06/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/20/Vue-router-%E8%B7%AF%E7%94%B1%E7%94%A8%E6%B3%95%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="米斯特黄">
@@ -323,7 +323,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/11/06/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2017/05/20/Vue-router-%E8%B7%AF%E7%94%B1%E7%94%A8%E6%B3%95%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" itemprop="url">Vue-router 路由问题总结</a></h1>
         
 
         <div class="post-meta">
@@ -335,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-06T15:26:46+08:00">
-                2019-11-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-20T00:06:19+08:00">
+                2017-05-20
               </time>
             
 
@@ -346,6 +346,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -354,8 +376,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/11/06/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/06/hello-world/" itemprop="commentCount"></span>
+                <a href="/2017/05/20/Vue-router-%E8%B7%AF%E7%94%B1%E7%94%A8%E6%B3%95%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/05/20/Vue-router-%E8%B7%AF%E7%94%B1%E7%94%A8%E6%B3%95%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -363,7 +385,7 @@
 
           
           
-             <span id="/2019/11/06/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2017/05/20/Vue-router-%E8%B7%AF%E7%94%B1%E7%94%A8%E6%B3%95%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" class="leancloud_visitors" data-flag-title="Vue-router 路由问题总结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -396,20 +418,37 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+            <h3 id="一、路由的两种模式-区别"><a href="#一、路由的两种模式-区别" class="headerlink" title="一、路由的两种模式(区别)"></a>一、路由的两种模式(区别)</h3><h5 id="emsp-emsp-hash模式"><a href="#emsp-emsp-hash模式" class="headerlink" title="&emsp;&emsp;hash模式"></a>&emsp;&emsp;hash模式</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">http:<span class="comment">//www.xxx.com/#/login</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>这种 #。后面 hash 值的变化，并不会导致浏览器向服务器发出请求，浏览器不发出请求，也就不会刷新页面。另外每次 hash 值的变化，还会触发hashchange 这个事件，通过这个事件我们就可以知道 hash 值发生了哪些变化。然后我们便可以监听hashchange来实现更新页面部分内容的操作：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">matchAndUpdate</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// todo 匹配 hash 做 dom 更新操作</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'hashchange'</span>, matchAndUpdate)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h5 id="emsp-emsp-history模式"><a href="#emsp-emsp-history模式" class="headerlink" title="&emsp;&emsp;history模式"></a>&emsp;&emsp;history模式</h5><p>HTML5标准发布。多了两个 API，pushState 和 replaceState，通过这两个 API 可以改变 url 地址且不会发送请求。同时还有popstate事件。通过这些就能用另一种方式来实现前端路由了，但原理都是跟 hash 实现相同的。用了HTML5的实现，单页路由的url就不会多出一个#，变得更加美观。但因为没有 # 号，所以当用户刷新页面之类的操作时，浏览器还是会给服务器发送请求。为了避免出现这种情况，所以这个实现需要服务器的支持，需要把所有路由都重定向到根页面。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">matchAndUpdate</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// todo 匹配路径 做 dom 更新操作</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'popstate'</span>, matchAndUpdate)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="二、嵌套路由"><a href="#二、嵌套路由" class="headerlink" title="二、嵌套路由"></a>二、嵌套路由</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> User = &#123;</span><br><span class="line">  template: <span class="string">'&lt;div&gt;User &#123;&#123; $route.params.id &#125;&#125;&lt;/div&gt;'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/user/:id'</span>, <span class="attr">component</span>: User &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
+<h3 id="三、路由跳转"><a href="#三、路由跳转" class="headerlink" title="三、路由跳转"></a>三、路由跳转</h3><h5 id="emsp-emsp-声明式"><a href="#emsp-emsp-声明式" class="headerlink" title="&emsp;&emsp;声明式"></a>&emsp;&emsp;声明式</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">:to</span>=<span class="string">"..."</span>&gt;</span><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="emsp-emsp-编程式-this-router-push"><a href="#emsp-emsp-编程式-this-router-push" class="headerlink" title="&emsp;&emsp;编程式(this.$router.push)"></a>&emsp;&emsp;编程式(this.$router.push)</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//参数可以是一个字符串路径，或者一个描述地址的对象:</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 字符串</span></span><br><span class="line">router.push(<span class="string">'home'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对象</span></span><br><span class="line">router.push(&#123; <span class="attr">path</span>: <span class="string">'home'</span> &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 命名的路由</span></span><br><span class="line">router.push(&#123; <span class="attr">name</span>: <span class="string">'user'</span>, <span class="attr">params</span>: &#123; <span class="attr">userId</span>: <span class="number">123</span> &#125;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 带查询参数，变成 /register?plan=private</span></span><br><span class="line">router.push(&#123; <span class="attr">path</span>: <span class="string">'register'</span>, <span class="attr">query</span>: &#123; <span class="attr">plan</span>: <span class="string">'private'</span> &#125;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> userId = <span class="string">'123'</span></span><br><span class="line">router.push(&#123; <span class="attr">name</span>: <span class="string">'user'</span>, <span class="attr">params</span>: &#123; userId &#125;&#125;) <span class="comment">// -&gt; /user/123</span></span><br><span class="line">router.push(&#123; <span class="attr">path</span>: <span class="string">`/user/<span class="subst">$&#123;userId&#125;</span>`</span> &#125;) <span class="comment">// -&gt; /user/123</span></span><br><span class="line"><span class="comment">// 这里的 params 不生效</span></span><br><span class="line">router.push(&#123; <span class="attr">path</span>: <span class="string">'/user'</span>, <span class="attr">params</span>: &#123; userId &#125;&#125;) <span class="comment">// -&gt; /user</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//router.go(n)这个方法的参数是一个整数，意思是在 history 记录中向前或者后退多少步，类似 window.history.go(n)</span></span><br><span class="line"><span class="comment">// 在浏览器记录中前进一步，等同于 history.forward()</span></span><br><span class="line">router.go(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 后退一步记录，等同于 history.back()</span></span><br><span class="line">router.go(<span class="number">-1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 前进 3 步记录</span></span><br><span class="line">router.go(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果 history 记录不够用，那就默默地失败呗</span></span><br><span class="line">router.go(<span class="number">-100</span>)</span><br><span class="line">router.go(<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、路由守卫"><a href="#四、路由守卫" class="headerlink" title="四、路由守卫"></a>四、路由守卫</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"></span><br><span class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> home = to.query.home || <span class="string">''</span>;</span><br><span class="line">  <span class="keyword">if</span> (to.name === <span class="string">'home'</span>) &#123; <span class="comment">//如果是home来的</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    next() <span class="comment">// 进行跳转</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="emsp-emsp-全局守卫"><a href="#emsp-emsp-全局守卫" class="headerlink" title="&emsp;&emsp;全局守卫"></a>&emsp;&emsp;全局守卫</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 当一个导航触发时，全局前置守卫按照创建顺序调用。守卫是异步解析执行，此时导航在所有守卫 resolve 完之前一直处于 等待中。</span></span><br><span class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="comment">// to: Route: 即将要进入的目标 路由对象</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// from: Route: 当前导航正要离开的路由</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 confirmed (确认的)。</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 全局后置钩子，然而和守卫不同的是，这些钩子不会接受 next 函数也不会改变导航本身：</span></span><br><span class="line">router.afterEach(<span class="function">(<span class="params">to, <span class="keyword">from</span></span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="emsp-emsp-组件守卫"><a href="#emsp-emsp-组件守卫" class="headerlink" title="&emsp;&emsp;组件守卫"></a>&emsp;&emsp;组件守卫</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> Foo = &#123;</span><br><span class="line">  template: <span class="string">`...`</span>,</span><br><span class="line">  beforeRouteEnter (to, <span class="keyword">from</span>, next) &#123;</span><br><span class="line">    <span class="comment">// 在渲染该组件的对应路由被 confirm 前调用</span></span><br><span class="line">    <span class="comment">// 不！能！获取组件实例 `this`</span></span><br><span class="line">    <span class="comment">// 因为当守卫执行前，组件实例还没被创建</span></span><br><span class="line">  &#125;,</span><br><span class="line">  beforeRouteUpdate (to, <span class="keyword">from</span>, next) &#123;</span><br><span class="line">    <span class="comment">// 在当前路由改变，但是该组件被复用时调用</span></span><br><span class="line">    <span class="comment">// 举例来说，对于一个带有动态参数的路径 /foo/:id，在 /foo/1 和 /foo/2 之间跳转的时候，</span></span><br><span class="line">    <span class="comment">// 由于会渲染同样的 Foo 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。</span></span><br><span class="line">    <span class="comment">// 可以访问组件实例 `this`</span></span><br><span class="line">  &#125;,</span><br><span class="line">  beforeRouteLeave (to, <span class="keyword">from</span>, next) &#123;</span><br><span class="line">    <span class="comment">// 导航离开该组件的对应路由时调用</span></span><br><span class="line">    <span class="comment">// 可以访问组件实例 `this`</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="五、路由懒加载"><a href="#五、路由懒加载" class="headerlink" title="五、路由懒加载"></a>五、路由懒加载</h3><p>结合 Vue 的异步组件和 Webpack 的代码分割功能，轻松实现路由组件的懒加载</p>
+<p>首先，可以将异步组件定义为返回一个 Promise 的工厂函数 (该函数返回的 Promise 应该 resolve 组件本身)：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">Promise</span>.resolve(&#123; <span class="comment">/* 组件定义对象 */</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>第二，在 Webpack 2 中，我们可以使用动态 import语法来定义代码分块点 (split point)：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span>(<span class="string">'./Foo.vue'</span>) <span class="comment">// 返回 Promise</span></span><br></pre></td></tr></table></figure>
+
+<p>结合这两者，这就是如何定义一个能够被 Webpack 自动代码分割的异步组件。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./Foo.vue'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/foo'</span>, <span class="attr">component</span>: Foo &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
           
         
       
@@ -498,6 +537,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -650,6 +711,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -801,15 +884,24 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
             
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">3</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
