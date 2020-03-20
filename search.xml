@@ -39,14 +39,14 @@
       </categories>
       <tags>
         <tag>vue</tag>
-        <tag>javascript</tag>
+        <tag>js</tag>
         <tag>router</tag>
       </tags>
   </entry>
   <entry>
     <title>Vue中使用Vconsole之移动端调式神器</title>
     <url>/2017/05/19/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8Vconsole%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E5%BC%8F%E7%A5%9E%E5%99%A8/</url>
-    <content><![CDATA[<p>&emsp;&emsp;在开发vue移动端项目中，大多需要再手机上测，此时我们需要借助Vconsole这个调式插件.<br>效果如下:<br><img src="/2017/05/19/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8Vconsole%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E5%BC%8F%E7%A5%9E%E5%99%A8/vconsole.jpeg" alt></p>
+    <content><![CDATA[<p>在开发vue移动端项目中，大多需要再手机上测，此时我们需要借助Vconsole这个调式插件.<br>效果如下:<br><img src="/2017/05/19/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8Vconsole%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E5%BC%8F%E7%A5%9E%E5%99%A8/vconsole.jpeg" alt></p>
 <h5 id="npm方式安装"><a href="#npm方式安装" class="headerlink" title="npm方式安装"></a>npm方式安装</h5><p>第一步 局部install</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install vconsole --save</span><br></pre></td></tr></table></figure>
 
@@ -63,13 +63,13 @@
       </categories>
       <tags>
         <tag>vue</tag>
-        <tag>javascript</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
     <title>h5如何判断ios还是android以及相互通信等</title>
     <url>/2017/02/01/h5%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%ADios%E8%BF%98%E6%98%AFAndroid/</url>
-    <content><![CDATA[<p>&emsp;&emsp;经常我们在做h5页面时或者混合app开发时，去和原生app开发人员进行交互等需求。<br>那么这时我们就需要前端去做机型的判断，需要借助navigator对象，如下:</p>
+    <content><![CDATA[<p>经常我们在做h5页面时或者混合app开发时，去和原生app开发人员进行交互等需求。<br>那么这时我们就需要前端去做机型的判断，需要借助navigator对象，如下:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> u = navigator.userAgent, app = navigator.appVersion;</span><br><span class="line"><span class="keyword">let</span> isAndroid = u.indexOf(<span class="string">'Android'</span>) &gt; <span class="number">-1</span> || u.indexOf(<span class="string">'Linux'</span>) &gt; <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">let</span> isIOS = !!u.match(<span class="regexp">/\(i[^;]+;( U;)? CPU.+Mac OS X/</span>);</span><br><span class="line"><span class="keyword">if</span> (isAndroid) &#123;</span><br><span class="line">  <span class="comment">// 安卓</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (isIOS) &#123;</span><br><span class="line">  <span class="comment">// ios</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>&emsp;&emsp;我们可能还会涉及到与原生开发通信等，如下:</p>
@@ -83,7 +83,7 @@
         <category>web前端</category>
       </categories>
       <tags>
-        <tag>javascript</tag>
+        <tag>js</tag>
         <tag>html5</tag>
       </tags>
   </entry>

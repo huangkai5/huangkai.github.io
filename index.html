@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -123,6 +130,10 @@
 
 
   <title>航海之旅</title>
+
+  <!-- 球型气泡标签云 -->
+  <script type="text/javascript" src="/js/src/bubble.js"></script>
+  
   
 
 
@@ -158,7 +169,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">成为海贼王的男人</p>
       
   </div>
 
@@ -629,7 +640,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  245
+                  243
                 </span>
               
 
@@ -668,7 +679,7 @@
       
         
           
-            <p>&emsp;&emsp;在开发vue移动端项目中，大多需要再手机上测，此时我们需要借助Vconsole这个调式插件.<br>效果如下:<br><img src="/2017/05/19/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8Vconsole%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E5%BC%8F%E7%A5%9E%E5%99%A8/vconsole.jpeg" alt></p>
+            <p>在开发vue移动端项目中，大多需要再手机上测，此时我们需要借助Vconsole这个调式插件.<br>效果如下:<br><img src="/2017/05/19/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8Vconsole%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E5%BC%8F%E7%A5%9E%E5%99%A8/vconsole.jpeg" alt></p>
 <h5 id="npm方式安装"><a href="#npm方式安装" class="headerlink" title="npm方式安装"></a>npm方式安装</h5><p>第一步 局部install</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vconsole --save</span><br></pre></td></tr></table></figure>
 
@@ -837,7 +848,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  218
+                  216
                 </span>
               
 
@@ -876,7 +887,7 @@
       
         
           
-            <p>&emsp;&emsp;经常我们在做h5页面时或者混合app开发时，去和原生app开发人员进行交互等需求。<br>那么这时我们就需要前端去做机型的判断，需要借助navigator对象，如下:</p>
+            <p>经常我们在做h5页面时或者混合app开发时，去和原生app开发人员进行交互等需求。<br>那么这时我们就需要前端去做机型的判断，需要借助navigator对象，如下:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> u = navigator.userAgent, app = navigator.appVersion;</span><br><span class="line"><span class="keyword">let</span> isAndroid = u.indexOf(<span class="string">'Android'</span>) &gt; <span class="number">-1</span> || u.indexOf(<span class="string">'Linux'</span>) &gt; <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">let</span> isIOS = !!u.match(<span class="regexp">/\(i[^;]+;( U;)? CPU.+Mac OS X/</span>);</span><br><span class="line"><span class="keyword">if</span> (isAndroid) &#123;</span><br><span class="line">  <span class="comment">// 安卓</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (isIOS) &#123;</span><br><span class="line">  <span class="comment">// ios</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>&emsp;&emsp;我们可能还会涉及到与原生开发通信等，如下:</p>
