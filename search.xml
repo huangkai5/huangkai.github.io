@@ -39,14 +39,13 @@
 <p>  Array.of方法可以用下面的代码模拟实现。</p>
   <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ArrayOf</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> [].slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>web前端</category>
+        <category>html5</category>
       </categories>
       <tags>
         <tag>js</tag>
         <tag>es6</tag>
         <tag>array</tag>
         <tag>from</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -103,13 +102,12 @@
 <p>  如果对没有 Iterator 接口的对象，使用扩展运算符，将会报错。如:</p>
   <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> arr = [...obj]; <span class="comment">// TypeError: Cannot spread non-iterable object</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>web前端</category>
+        <category>html5</category>
       </categories>
       <tags>
         <tag>js</tag>
         <tag>es6</tag>
         <tag>array</tag>
-        <tag>数组</tag>
         <tag>扩展运算符</tag>
       </tags>
   </entry>
@@ -133,12 +131,11 @@
 <h3 id="…new-Set-arr"><a href="#…new-Set-arr" class="headerlink" title="[…new Set(arr)]"></a>[…new Set(arr)]</h3>  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">[...new <span class="built_in">Set</span>(arr)] </span><br><span class="line"><span class="comment">//代码就是这么少----（其实，严格来说并不算是一种，相对于第一种方法来说只是简化了代码</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>web前端</category>
+        <category>html5</category>
       </categories>
       <tags>
         <tag>js</tag>
         <tag>array</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -179,14 +176,14 @@
 <p>　　使用await/async时，你不再需要那么多箭头函数，这样你就可以像调试同步代码一样跳过await语句。</p>
 ]]></content>
       <categories>
-        <category>web前端</category>
+        <category>html5</category>
       </categories>
       <tags>
         <tag>js</tag>
-        <tag>promise</tag>
-        <tag>异步</tag>
         <tag>async</tag>
         <tag>await</tag>
+        <tag>promise</tag>
+        <tag>异步</tag>
         <tag>es7</tag>
       </tags>
   </entry>
@@ -314,7 +311,7 @@
   <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  <span class="keyword">const</span> preloadImage = <span class="function"><span class="keyword">function</span> (<span class="params">path</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> image = <span class="keyword">new</span> Image();</span><br><span class="line">    image.onload  = resolve;</span><br><span class="line">    image.onerror = reject;</span><br><span class="line">    image.src = path;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>web前端</category>
+        <category>html5</category>
       </categories>
       <tags>
         <tag>js</tag>
@@ -358,7 +355,7 @@
 <p>结合这两者，这就是如何定义一个能够被 Webpack 自动代码分割的异步组件。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./Foo.vue'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/foo'</span>, <span class="attr">component</span>: Foo &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>web前端</category>
+        <category>html5</category>
       </categories>
       <tags>
         <tag>vue</tag>
@@ -382,7 +379,7 @@
 <p>第二歩 在main.js中</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> util <span class="keyword">from</span> <span class="string">'xxx/util'</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断开发环境还是生产环境</span></span><br><span class="line"><span class="keyword">if</span> (process.env.NODE_ENV !== <span class="string">'production'</span>) &#123;</span><br><span class="line">  util.loadScript(<span class="string">'vconsole.js的路径'</span>).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">new</span> <span class="built_in">window</span>.VConsole();</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>web前端</category>
+        <category>html5</category>
       </categories>
       <tags>
         <tag>vue</tag>
@@ -403,7 +400,7 @@
 <p>如果android和ios需要调用js方法的话，则直接把方法暴露在全局的js下即可，然后原生就可以直接通过webview调用js方法。</p>
 ]]></content>
       <categories>
-        <category>web前端</category>
+        <category>html5</category>
       </categories>
       <tags>
         <tag>js</tag>
