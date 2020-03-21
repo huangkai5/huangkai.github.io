@@ -183,10 +183,10 @@
       </categories>
       <tags>
         <tag>js</tag>
-        <tag>async</tag>
-        <tag>await</tag>
         <tag>promise</tag>
         <tag>异步</tag>
+        <tag>async</tag>
+        <tag>await</tag>
         <tag>es7</tag>
       </tags>
   </entry>
