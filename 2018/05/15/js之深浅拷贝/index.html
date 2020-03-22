@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="js,深拷贝,浅拷贝," />
 
 
 
@@ -86,13 +86,15 @@
 
 
 
-<meta name="description" content="程序猿的自我修养">
-<meta property="og:type" content="website">
-<meta property="og:title" content="航海之旅">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;categories&#x2F;html5&#x2F;index.html">
+<meta name="description" content="js的数据类型  Number（数值型）、String（字符串）、Boolean（布尔型）、Object（对象，object和array都属于Object类型）、null、undefined   我们日常使用的javascript深浅拷贝主要是面向Object引用类型进行拷贝； 基本数据类型复制  12345678&#x2F;&#x2F; 深拷贝var a = 1;var b = a;console.log(b) &#x2F;">
+<meta name="keywords" content="js,深拷贝,浅拷贝">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js之深浅拷贝">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2018&#x2F;05&#x2F;15&#x2F;js%E4%B9%8B%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D&#x2F;index.html">
 <meta property="og:site_name" content="航海之旅">
-<meta property="og:description" content="程序猿的自我修养">
+<meta property="og:description" content="js的数据类型  Number（数值型）、String（字符串）、Boolean（布尔型）、Object（对象，object和array都属于Object类型）、null、undefined   我们日常使用的javascript深浅拷贝主要是面向Object引用类型进行拷贝； 基本数据类型复制  12345678&#x2F;&#x2F; 深拷贝var a = 1;var b = a;console.log(b) &#x2F;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-22T14:34:13.047Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -123,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/html5/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/15/js之深浅拷贝/"/>
 
 
 
 
 
-  <title>分类: html5 | 航海之旅</title>
+  <title>js之深浅拷贝 | 航海之旅</title>
 
   <!-- 球型气泡标签云 -->
   <script type="text/javascript" src="/js/src/bubble.js"></script>
@@ -152,7 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -292,307 +294,322 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>html5<small>分类</small>
-        </h1>
-      </div>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/15/js%E4%B9%8B%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="米斯特黄">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/zero.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="航海之旅">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js之深浅拷贝</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T12:59:22+08:00">
+                2018-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html5/" itemprop="url" rel="index">
+                    <span itemprop="name">html5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/15/js%E4%B9%8B%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/15/js%E4%B9%8B%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/05/15/js%E4%B9%8B%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/" class="leancloud_visitors" data-flag-title="js之深浅拷贝">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2020-03-01T10:27:06+08:00"
-              content="2020-03-01" >
-          03-01
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-            <a class="my-post-title-link" href="/2020/03/01/js%E6%89%BE%E5%87%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AD%97%E7%AC%A6/" itemprop="url">
-              
-                <span itemprop="name">js找出字符串中出现最多的字符</span>
-              
-            </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <h3 id="js的数据类型"><a href="#js的数据类型" class="headerlink" title="js的数据类型"></a>js的数据类型</h3><p>  Number（数值型）、String（字符串）、Boolean（布尔型）、Object（对象，object和array都属于Object类型）、null、undefined</p>
+<p>  我们日常使用的javascript深浅拷贝主要是面向Object引用类型进行拷贝；</p>
+<h3 id="基本数据类型复制"><a href="#基本数据类型复制" class="headerlink" title="基本数据类型复制"></a>基本数据类型复制</h3>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 深拷贝</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">// 1</span></span><br><span class="line">a = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
 
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
+<p>  因为a，b都是属于基本类型，基本类型的复制是不会影响对方的，因为基本类型是每一次创建变量都会在栈内存中开辟一块内存，用来存放值，所以基本类型进行复制是不会对另外一个变量有影响的；</p>
+<h3 id="引用类型复制"><a href="#引用类型复制" class="headerlink" title="引用类型复制"></a>引用类型复制</h3><p>  引用类型的复制我们分为数组的复制和对象的复制两个方面来进行讲解：</p>
+<h4 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h4>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr1 = [<span class="string">'1'</span>, <span class="string">'2'</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = arr1;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">// ["1", "2"]</span></span><br><span class="line"></span><br><span class="line">arr1.push(<span class="number">3</span>);</span><br><span class="line">arr2.push(<span class="number">4</span>)</span><br><span class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">// ["1", "2", 3, 4]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">// ["1", "2", 3, 4]</span></span><br></pre></td></tr></table></figure>
 
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2018-05-15T12:59:22+08:00"
-              content="2018-05-15" >
-          05-15
-        </time>
-      </div>
+<p>  上面代码可以看出来，由于arr1和arr2指向的是同一个内存，所以不管是arr1还是arr2修改，任何一个一个改动两个数组都是会互相产生影响的；就是我们常说的引用类型的浅拷贝。</p>
+<h4 id="silce"><a href="#silce" class="headerlink" title="silce"></a>silce</h4>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr1 = [<span class="string">'red'</span>,<span class="string">'green'</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = arr1.slice(<span class="number">0</span>);<span class="comment">//复制</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2)<span class="comment">//['red','green'];</span></span><br><span class="line">arr1.push(<span class="string">'black'</span>) ;<span class="comment">//改变color1的值</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2)<span class="comment">//["red", "green"]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr1)<span class="comment">//["red", "green", "black"]</span></span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-        
-            <a class="my-post-title-link" href="/2018/05/15/js%E4%B9%8B%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/" itemprop="url">
-              
-                <span itemprop="name">js之深浅拷贝</span>
-              
-            </a>
-        
-      </h2>
+<p>  js原生的方法slice会返回一个新的数组，上述代码乍一看会以为是深拷贝，因为arr2和arr1相互复制和牵引，而当arr1调用了push方法添加了新数组子项的时候，arr2没有发生变化；<br>  是的，这是符合深拷贝的特性，但是拷贝的不够彻底，所以还不能算是真正意义上的深拷贝，所以slice只能被称为浅拷贝；slice方法只适用于一维数组的拷贝，在二维数组中就会破绽百出；</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr1=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,[<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>]];</span><br><span class="line"><span class="keyword">var</span> arr2=arr1.slice(<span class="number">0</span>);</span><br><span class="line">arr1[<span class="number">3</span>][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[1,2,3,['0','2','3']]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">//[1,2,3,['0','2','3']]</span></span><br></pre></td></tr></table></figure>
 
-    </header>
-  </article>
+<p>  所以事实证明slice不是深拷贝；</p>
+<h4 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h4>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr1 = [<span class="string">'red'</span>,<span class="string">'green'</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = arr1.concat();<span class="comment">//复制</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2)<span class="comment">//['red','green'];</span></span><br><span class="line">arr1.push(<span class="string">'black'</span>) ;<span class="comment">//改变color1的值</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2)<span class="comment">//["red", "green"]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr1)<span class="comment">//["red", "green", "black"]</span></span><br></pre></td></tr></table></figure>
+
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr1=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,[<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>]];</span><br><span class="line"><span class="keyword">var</span> arr2=arr1.concat();</span><br><span class="line">arr1[<span class="number">3</span>][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[1,2,3,['0','2','3']]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">//[1,2,3,['0','2','3']]</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>concat方法在一维数组中是不会影响源数组的数据的，而在二维数组中concat的表现和slice是一样的；</strong></p>
+<h4 id="Object-assign"><a href="#Object-assign" class="headerlink" title="Object.assign()"></a>Object.assign()</h4><p>  <strong>第一级属性深拷贝，从第二级属性开始就是浅拷贝。</strong></p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//示例1  一层深拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">a</span>:<span class="number">1</span>&#125;</span><br><span class="line"><span class="keyword">let</span> newObj = <span class="built_in">Object</span>.assign(&#123;&#125;,obj);</span><br><span class="line"><span class="built_in">console</span>.log(newObj); <span class="comment">//&#123;a: 1&#125;</span></span><br><span class="line">newObj.a=<span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj); <span class="comment">//&#123;a:1&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(newObj); <span class="comment">//&#123;a: 2&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//示例2  二层浅拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:&#123;<span class="attr">name</span>:<span class="string">"zhangsan"</span>&#125;&#125;</span><br><span class="line"><span class="keyword">let</span> newObj = <span class="built_in">Object</span>.assign(&#123;&#125;,obj);</span><br><span class="line"><span class="built_in">console</span>.log(newObj); <span class="comment">//&#123;a:1,b:&#123;name:"zhangsan"&#125;&#125;</span></span><br><span class="line">newObj.b.name=<span class="string">"lisi"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj); <span class="comment">//&#123;a:1,b:&#123;name:"lisi"&#125;&#125;</span></span><br></pre></td></tr></table></figure>
 
 
-      
-        
+<h4 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h4><p>  js数组中实现深拷贝的方法都多种，比如JSON.parse(JSON.stringify())和递归以及JQuery库的extend方法（只是extend方法需要依赖JQuery库，所以我们尽量的使用原生的方式来实现）都是可以实现数组和对象的深拷贝的；</p>
+<h5 id="JSON-parse-JSON-stringify"><a href="#JSON-parse-JSON-stringify" class="headerlink" title="JSON.parse(JSON.stringify())"></a>JSON.parse(JSON.stringify())</h5>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr1 = [<span class="string">'red'</span>,<span class="string">'green'</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(arr1));<span class="comment">//复制</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2)<span class="comment">//['red','green'];</span></span><br><span class="line">arr1.push(<span class="string">'black'</span>) ;<span class="comment">//改变color1的值</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2)<span class="comment">//["red", "green"]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr1)<span class="comment">//["red", "green", "black"]</span></span><br></pre></td></tr></table></figure>
 
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
+<h5 id="递归实现深拷贝："><a href="#递归实现深拷贝：" class="headerlink" title="递归实现深拷贝："></a>递归实现深拷贝：</h5>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//判断参数是不是一个对象</span></span><br><span class="line">    <span class="keyword">let</span> objClone = obj <span class="keyword">instanceof</span> <span class="built_in">Object</span>?[]:&#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span>(obj &amp;&amp; <span class="keyword">typeof</span> obj===<span class="string">"object"</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(key <span class="keyword">in</span> obj)&#123;</span><br><span class="line">            <span class="keyword">if</span>(obj.hasOwnProperty(key))&#123;</span><br><span class="line">                <span class="comment">//判断ojb子元素是否为对象，如果是，递归复制</span></span><br><span class="line">                <span class="keyword">if</span>(obj[key]&amp;&amp;<span class="keyword">typeof</span> obj[key] ===<span class="string">"object"</span>)&#123;</span><br><span class="line">                    objClone[key] = deepClone(obj[key]);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="comment">//如果不是，简单复制</span></span><br><span class="line">                    objClone[key] = obj[key];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> objClone;</span><br><span class="line">&#125;    </span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a =&#123;</span><br><span class="line">    x:<span class="number">1</span>,</span><br><span class="line">    y:<span class="number">2</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">b=deepClone(a);</span><br><span class="line">a.x=<span class="number">3</span></span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br></pre></td></tr></table></figure>
 
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2018-04-21T21:50:23+08:00"
-              content="2018-04-21" >
-          04-21
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-            <a class="my-post-title-link" href="/2018/04/21/es6%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%95%B0%E7%BB%84/" itemprop="url">
-              
-                <span itemprop="name">es6转化为数组Array</span>
-              
-            </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2018-03-21T21:19:33+08:00"
-              content="2018-03-21" >
-          03-21
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-            <a class="my-post-title-link" href="/2018/03/21/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/" itemprop="url">
-              
-                <span itemprop="name">...扩展运算符</span>
-              
-            </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2017-09-21T21:03:20+08:00"
-              content="2017-09-21" >
-          09-21
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-            <a class="my-post-title-link" href="/2017/09/21/js%E4%B8%AD%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95/" itemprop="url">
-              
-                <span itemprop="name">js中数组去重方法</span>
-              
-            </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2017-08-10T08:44:34+08:00"
-              content="2017-08-10" >
-          08-10
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-            <a class="my-post-title-link" href="/2017/08/10/async%E5%92%8Cawait%E7%9A%84%E7%94%A8%E6%B3%95%E4%BB%A5%E5%8F%8Apromise%E7%9A%84%E5%8C%BA%E5%88%AB/" itemprop="url">
-              
-                <span itemprop="name">async和await的用法以及promise的区别</span>
-              
-            </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2017-07-20T23:44:34+08:00"
-              content="2017-07-20" >
-          07-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-            <a class="my-post-title-link" href="/2017/07/20/promise%E8%AF%A6%E8%A7%A3/" itemprop="url">
-              
-                <span itemprop="name">promise详解</span>
-              
-            </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2017-05-20T00:06:19+08:00"
-              content="2017-05-20" >
-          05-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-            <a class="my-post-title-link" href="/2017/05/20/Vue-router-%E8%B7%AF%E7%94%B1%E7%94%A8%E6%B3%95%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" itemprop="url">
-              
-                <span itemprop="name">Vue-router 路由问题总结</span>
-              
-            </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2017-05-19T08:05:26+08:00"
-              content="2017-05-19" >
-          05-19
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-            <a class="my-post-title-link" href="/2017/05/19/Vue%E4%B8%AD%E4%BD%BF%E7%94%A8Vconsole%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E5%BC%8F%E7%A5%9E%E5%99%A8/" itemprop="url">
-              
-                <span itemprop="name">Vue中使用Vconsole之移动端调式神器</span>
-              
-            </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="my-post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="my-post-header">
-
-      <div class="my-post-meta">
-        <time class="my-post-time" itemprop="dateCreated"
-              datetime="2017-02-01T22:32:50+08:00"
-              content="2017-02-01" >
-          02-01
-        </time>
-      </div>
-
-      <h2 class="post-title">
-        
-            <a class="my-post-title-link" href="/2017/02/01/h5%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%ADios%E8%BF%98%E6%98%AFAndroid/" itemprop="url">
-              
-                <span itemprop="name">h5如何判断ios还是android以及相互通信等</span>
-              
-            </a>
-        
-      </h2>
-
-    </header>
-  </article>
-
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>  1：深拷贝只是从源数据中拷贝一份出来进行操作，而不是改变源数据；改变源数据的那是浅拷贝；</p>
+<p>  2：原生js方法slice、concat都不是真正意义上的深拷贝，都仅只适用于一维数组，拷贝的属性不够彻底；</p>
+<p>  3：对象拷贝中Object.assign()第一级属性深拷贝，从第二级属性开始就是浅拷贝；</p>
+<p>  4：实现js深拷贝我们可以通过JSON.parse(JSON.stringify())、递归以及JQuery库的extend方法来实现；</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>给个幸苦费呗，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="米斯特黄 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/" rel="tag"># 深拷贝</a>
+          
+            <a href="/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D/" rel="tag"># 浅拷贝</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/21/es6%E8%BD%AC%E5%8C%96%E4%B8%BA%E6%95%B0%E7%BB%84/" rel="next" title="es6转化为数组Array">
+                <i class="fa fa-chevron-left"></i> es6转化为数组Array
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/01/js%E6%89%BE%E5%87%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AD%97%E7%AC%A6/" rel="prev" title="js找出字符串中出现最多的字符">
+                js找出字符串中出现最多的字符 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -600,6 +617,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -620,8 +644,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -713,6 +746,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#js的数据类型"><span class="nav-number">1.</span> <span class="nav-text">js的数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型复制"><span class="nav-number">2.</span> <span class="nav-text">基本数据类型复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用类型复制"><span class="nav-number">3.</span> <span class="nav-text">引用类型复制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#浅拷贝"><span class="nav-number">3.1.</span> <span class="nav-text">浅拷贝</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#silce"><span class="nav-number">3.2.</span> <span class="nav-text">silce</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#concat"><span class="nav-number">3.3.</span> <span class="nav-text">concat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-assign"><span class="nav-number">3.4.</span> <span class="nav-text">Object.assign()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#深拷贝"><span class="nav-number">3.5.</span> <span class="nav-text">深拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#JSON-parse-JSON-stringify"><span class="nav-number">3.5.1.</span> <span class="nav-text">JSON.parse(JSON.stringify())</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#递归实现深拷贝："><span class="nav-number">3.5.2.</span> <span class="nav-text">递归实现深拷贝：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -871,6 +920,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
