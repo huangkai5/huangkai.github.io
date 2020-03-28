@@ -17,6 +17,15 @@
       </tags>
   </entry>
   <entry>
+    <title>js判断设备Pc还是移动端</title>
+    <url>/2018/11/28/js%E5%88%A4%E6%96%AD%E8%AE%BE%E5%A4%87Pc%E8%BF%98%E6%98%AF%E7%A7%BB%E5%8A%A8%E7%AB%AF/</url>
+    <content><![CDATA[<h3 id="通常我们开发网页的情况下，为了给用户更好的视觉效果，需要判断用户是在浏览器pc打开还是移动端打开。代码如下"><a href="#通常我们开发网页的情况下，为了给用户更好的视觉效果，需要判断用户是在浏览器pc打开还是移动端打开。代码如下" class="headerlink" title="通常我们开发网页的情况下，为了给用户更好的视觉效果，需要判断用户是在浏览器pc打开还是移动端打开。代码如下:"></a>通常我们开发网页的情况下，为了给用户更好的视觉效果，需要判断用户是在浏览器pc打开还是移动端打开。代码如下:</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> sUserAgent = navigator.userAgent.toLowerCase();</span><br><span class="line"><span class="keyword">var</span> bIsIpad = sUserAgent.match(<span class="regexp">/ipad/i</span>) == <span class="string">"ipad"</span>;</span><br><span class="line"><span class="keyword">var</span> bIsMidp = sUserAgent.match(<span class="regexp">/midp/i</span>) == <span class="string">"midp"</span>;</span><br><span class="line"><span class="keyword">var</span> bIsUc7 = sUserAgent.match(<span class="regexp">/rv:1.2.3.4/i</span>) == <span class="string">"rv:1.2.3.4"</span>;</span><br><span class="line"><span class="keyword">var</span> bIsIphoneOs = sUserAgent.match(<span class="regexp">/iphone os/i</span>) == <span class="string">"iphone os"</span>;</span><br><span class="line"><span class="keyword">var</span> bIsUc = sUserAgent.match(<span class="regexp">/ucweb/i</span>) == <span class="string">"ucweb"</span>;</span><br><span class="line"><span class="keyword">var</span> bIsAndroid = sUserAgent.match(<span class="regexp">/android/i</span>) == <span class="string">"android"</span>;</span><br><span class="line"><span class="keyword">var</span> bIsCE = sUserAgent.match(<span class="regexp">/windows ce/i</span>) == <span class="string">"windows ce"</span>;</span><br><span class="line"><span class="keyword">var</span> bIsWM = sUserAgent.match(<span class="regexp">/windows mobile/i</span>) == <span class="string">"windows mobile"</span>;</span><br><span class="line"><span class="keyword">if</span> (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) &#123;</span><br><span class="line">  <span class="comment">// 移动设备</span></span><br><span class="line">  <span class="built_in">window</span>.location.href = <span class="string">"http://www.baidu.com"</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// pc设备</span></span><br><span class="line">  <span class="built_in">window</span>.location.href = <span class="string">"http://www.hk5.club"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js判断数据类型</title>
     <url>/2018/09/23/js%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
     <content><![CDATA[<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><h5 id="type-of"><a href="#type-of" class="headerlink" title="type of"></a>type of</h5><p>  type of 一些常用的类型来说那算是毫无压力，比如Function、String、Number、Undefined等，但是要是检测Array的对象就不起作用了。 利用typeof除了array和null判断为object外，其他的都可以正常判断</p>
@@ -285,12 +294,12 @@
         <category>html5</category>
       </categories>
       <tags>
-        <tag>js</tag>
-        <tag>promise</tag>
-        <tag>异步</tag>
         <tag>async</tag>
         <tag>await</tag>
+        <tag>promise</tag>
+        <tag>异步</tag>
         <tag>es7</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -420,10 +429,10 @@
         <category>html5</category>
       </categories>
       <tags>
-        <tag>js</tag>
-        <tag>es6</tag>
         <tag>promise</tag>
         <tag>异步</tag>
+        <tag>js</tag>
+        <tag>es6</tag>
       </tags>
   </entry>
   <entry>
@@ -464,8 +473,8 @@
         <category>html5</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>js</tag>
+        <tag>vue</tag>
         <tag>router</tag>
       </tags>
   </entry>
@@ -488,8 +497,8 @@
         <category>html5</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>js</tag>
+        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
