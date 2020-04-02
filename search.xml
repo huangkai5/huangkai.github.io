@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>js之继承方式</title>
-    <url>/2020/03/22/js%E4%B9%8B%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<p>参考阮一峰的文章</p>
-]]></content>
+    <title>es6中class实现拖拽封装</title>
+    <url>/2020/04/02/es6%E4%B8%ADclass%E5%AE%9E%E7%8E%B0%E6%8B%96%E6%8B%BD%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<p>今天我们来实现一个class封装的拖拽demo，并且以继承的方式。实现拖拽:</p>
+<p><img src="/2020/04/02/es6%E4%B8%ADclass%E5%AE%9E%E7%8E%B0%E6%8B%96%E6%8B%BD%E5%B0%81%E8%A3%85/drag.jpeg" alt></p>
+<p>下面我们来写代码:</p>
+<p>css如下</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#box1</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#box2</span> &#123;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>html如下</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box1"</span>&gt;</span>box1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box2"</span>&gt;</span>box2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来是js</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 父类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Drag</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 每次进入页面时都会执行此方法</span></span><br><span class="line">  <span class="keyword">constructor</span>(dom) &#123;</span><br><span class="line">    <span class="keyword">this</span>.box = <span class="built_in">document</span>.querySelector(dom);</span><br><span class="line">    <span class="keyword">this</span>.x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">this</span>.y = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">this</span>.init()</span><br><span class="line">  &#125;</span><br><span class="line">  init() &#123;</span><br><span class="line">    <span class="comment">// console.log(this.box)</span></span><br><span class="line">    <span class="keyword">this</span>.box.onmousedown = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.box)</span><br><span class="line">      <span class="keyword">this</span>.x = e.clientX - <span class="keyword">this</span>.box.offsetLeft;</span><br><span class="line">      <span class="keyword">this</span>.y = e.clientY - <span class="keyword">this</span>.box.offsetTop;</span><br><span class="line">      <span class="comment">// 移动事件</span></span><br><span class="line">      <span class="keyword">this</span>.box.onmousemove = <span class="keyword">this</span>.fnMove.bind(<span class="keyword">this</span>)</span><br><span class="line">      <span class="keyword">this</span>.box.onmouseup = <span class="keyword">this</span>.fnUp.bind(<span class="keyword">this</span>)</span><br><span class="line">    &#125;.bind(<span class="keyword">this</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  fnMove(e) &#123;</span><br><span class="line">    <span class="keyword">this</span>.box.style.left = e.clientX - <span class="keyword">this</span>.x + <span class="string">'px'</span></span><br><span class="line">    <span class="keyword">this</span>.box.style.top = e.clientY - <span class="keyword">this</span>.y + <span class="string">'px'</span></span><br><span class="line">  &#125;</span><br><span class="line">  fnUp() &#123;</span><br><span class="line">      <span class="keyword">this</span>.box.onmousemove = <span class="literal">null</span>;</span><br><span class="line">      <span class="keyword">this</span>.box.onmouseout = <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类 并限制左侧移动范围</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">limitDrag</span> <span class="keyword">extends</span> <span class="title">Drag</span> </span>&#123;</span><br><span class="line">  fnMove(e) &#123;</span><br><span class="line">    <span class="comment">// 继承Drag的fnMove方法</span></span><br><span class="line">    <span class="keyword">super</span>.fnMove(e);</span><br><span class="line">    <span class="comment">// 给limitDrag单独增加方法</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>.box.offsetLeft &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">this</span>.box.style.left = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用传id</span></span><br><span class="line"><span class="keyword">new</span> Drag(<span class="string">'#box1'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> limitDrag(<span class="string">'#box2'</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="ok，截止到目前，你的class拖拽方法就已经完成，接下来你就可以去本地试试咯"><a href="#ok，截止到目前，你的class拖拽方法就已经完成，接下来你就可以去本地试试咯" class="headerlink" title="ok，截止到目前，你的class拖拽方法就已经完成，接下来你就可以去本地试试咯~"></a>ok，截止到目前，你的class拖拽方法就已经完成，接下来你就可以去本地试试咯~</h5>]]></content>
       <categories>
         <category>html5</category>
       </categories>
@@ -12,8 +23,8 @@
         <tag>js</tag>
         <tag>es6</tag>
         <tag>class</tag>
-        <tag>prototype</tag>
-        <tag>继承</tag>
+        <tag>拖拽</tag>
+        <tag>’继承‘</tag>
       </tags>
   </entry>
   <entry>
@@ -164,6 +175,22 @@
       </tags>
   </entry>
   <entry>
+    <title>js之继承方式</title>
+    <url>/2018/03/22/js%E4%B9%8B%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<p>参考阮一峰的文章</p>
+]]></content>
+      <categories>
+        <category>html5</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>es6</tag>
+        <tag>class</tag>
+        <tag>prototype</tag>
+        <tag>继承</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>...扩展运算符</title>
     <url>/2018/03/21/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
     <content><![CDATA[<h3 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h3><p>  扩展运算符（spread）是三个点（…）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列。</p>
@@ -294,12 +321,12 @@
         <category>html5</category>
       </categories>
       <tags>
+        <tag>js</tag>
         <tag>async</tag>
         <tag>await</tag>
         <tag>promise</tag>
         <tag>异步</tag>
         <tag>es7</tag>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -429,9 +456,9 @@
         <category>html5</category>
       </categories>
       <tags>
+        <tag>js</tag>
         <tag>promise</tag>
         <tag>异步</tag>
-        <tag>js</tag>
         <tag>es6</tag>
       </tags>
   </entry>
@@ -473,8 +500,8 @@
         <category>html5</category>
       </categories>
       <tags>
-        <tag>js</tag>
         <tag>vue</tag>
+        <tag>js</tag>
         <tag>router</tag>
       </tags>
   </entry>
@@ -497,8 +524,8 @@
         <category>html5</category>
       </categories>
       <tags>
-        <tag>js</tag>
         <tag>vue</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
