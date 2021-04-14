@@ -307,6 +307,236 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/10/async%E5%92%8Cawait%E7%9A%84%E7%94%A8%E6%B3%95%E4%BB%A5%E5%8F%8Apromise%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="米斯特黄">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/zero.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="航海之旅">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/10/async%E5%92%8Cawait%E7%9A%84%E7%94%A8%E6%B3%95%E4%BB%A5%E5%8F%8Apromise%E7%9A%84%E5%8C%BA%E5%88%AB/" itemprop="url">async和await的用法以及promise的区别</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T08:44:34+08:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/html5/" itemprop="url" rel="index">
+                    <span itemprop="name">html5</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/08/10/async%E5%92%8Cawait%E7%9A%84%E7%94%A8%E6%B3%95%E4%BB%A5%E5%8F%8Apromise%E7%9A%84%E5%8C%BA%E5%88%AB/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/08/10/async%E5%92%8Cawait%E7%9A%84%E7%94%A8%E6%B3%95%E4%BB%A5%E5%8F%8Apromise%E7%9A%84%E5%8C%BA%E5%88%AB/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/08/10/async%E5%92%8Cawait%E7%9A%84%E7%94%A8%E6%B3%95%E4%BB%A5%E5%8F%8Apromise%E7%9A%84%E5%8C%BA%E5%88%AB/" class="leancloud_visitors" data-flag-title="async和await的用法以及promise的区别">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="什么是Async-Await"><a href="#什么是Async-Await" class="headerlink" title="什么是Async/Await"></a>什么是Async/Await</h3><p>  async/await是写异步代码的新方式(es7)，以前的方法有回调函数和Promise。<br>  async/await是基于Promise实现的，它不能用于普通的回调函数。<br>  async/await与Promise一样，是非阻塞的。<br>  async/await使得异步代码看起来像同步代码，这正是它的魔力所在。</p>
+<h3 id="Async-Await语法"><a href="#Async-Await语法" class="headerlink" title="Async/Await语法"></a>Async/Await语法</h3><p>  假设函数getJSON返回值是 Promise，并且 Promise resolves 有一些JSON 对象。我们只想调用它并且记录该JSON并且返回完成。</p>
+<p>　1.使用Promise：</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> makeRequest = <span class="function"><span class="params">()</span> =&gt;</span></span><br><span class="line">    getJSON().then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"done"</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">makeRequest()</span><br></pre></td></tr></table></figure>
+
+<p>  2.使用Async：</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> makeRequest = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">     <span class="comment">// await getJSON()表示console.log会等到getJSON的promise成功reosolve之后再执行。</span></span><br><span class="line">     <span class="built_in">console</span>.log(<span class="keyword">await</span> getJSON)</span><br><span class="line">     <span class="keyword">return</span> <span class="string">"done"</span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> makeRequest()</span><br></pre></td></tr></table></figure>
+
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><p>  函数前面多了一个aync关键字。await关键字只能用在aync定义的函数内。async函数会隐式地返回一个promise，该promise的reosolve值就是函数return的值。(示例中reosolve值就是字符串”done”)</p>
+<h3 id="为什么Async-Await更好"><a href="#为什么Async-Await更好" class="headerlink" title="为什么Async/Await更好"></a>为什么Async/Await更好</h3><p>1.使用async函数可以让代码简洁很多，不需要像Promise一样需要些then，不需要写匿名函数处理Promise的resolve值，也不需要定义多余的data变量，还避免了嵌套代码。</p>
+<p>2.错误处理：<br>　Async/Await 让 try/catch 可以同时处理同步和异步错误。在下面的promise示例中，try/catch 不能处理 JSON.parse 的错误，因为它在Promise中。我们需要使用 .catch，这样错误处理代码非常冗余。并且，在我们的实际生产代码会更加复杂。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> makeRequest = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        getJSON().then(<span class="function"><span class="params">result</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="comment">// JSON.parse可能会出错</span></span><br><span class="line">            <span class="keyword">const</span> data = <span class="built_in">JSON</span>.parse(result)</span><br><span class="line">            <span class="built_in">console</span>.log(data)</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">// 取消注释，处理异步代码的错误</span></span><br><span class="line">        <span class="comment">// .catch((err) =&gt; &#123;</span></span><br><span class="line">        <span class="comment">//   console.log(err)</span></span><br><span class="line">        <span class="comment">// &#125;)</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  使用aync/await的话，catch能处理JSON.parse错误:</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> <span class="keyword">const</span> makeRequest = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// this parse may fail</span></span><br><span class="line">        <span class="keyword">const</span> data = <span class="built_in">JSON</span>.parse(<span class="keyword">await</span> getJSON())</span><br><span class="line">        <span class="built_in">console</span>.log(data)</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.条件语句<br>　　条件语句也和错误捕获是一样的，在 Async 中也可以像平时一般使用条件语句</p>
+<p>4.中间值<br>　　你很可能遇到过这样的场景，调用promise1，使用promise1返回的结果去调用promise2，然后使用两者的结果 去调用promise3。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> makeRequest = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> promise1().then(<span class="function"><span class="params">value1</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> promise2(value1).then(<span class="function"><span class="params">value2</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> promise3(value1, value2)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果 promise3 不需要 value1，嵌套将会变得简单。如果你忍受不了嵌套，你可以将value 1 &amp; 2 放进Promise.all来避免深层嵌套，但是这种方法为了可读性牺牲了语义。除了避免嵌套，并没有其他理由将value1和value2放在一个数组中</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> makeRequest = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> promise1().then(<span class="function"><span class="params">value1</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Promise</span>.all([value1, promise2(value1)])</span><br><span class="line">    &#125;).then(<span class="function">(<span class="params">[value1, value2]</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> promise3(value1, value2)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  使用async/await的话，代码会变得异常简单和直观。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> makeRequest = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> value1 = <span class="keyword">await</span> promise1()</span><br><span class="line">    <span class="keyword">const</span> value2 = <span class="keyword">await</span> promise2(value1)</span><br><span class="line">    <span class="keyword">return</span> promise3(value1, value2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.错误栈</p>
+<p>  如果 Promise 连续调用，对于错误的处理是很麻烦的。你无法知道错误出在哪里。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> makeRequest = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> callAPromise()</span><br><span class="line">        .then(<span class="function"><span class="params">()</span> =&gt;</span> callAPromise())</span><br><span class="line">        .then(<span class="function"><span class="params">()</span> =&gt;</span> callAPromise())</span><br><span class="line">        .then(<span class="function"><span class="params">()</span> =&gt;</span> callAPromise())</span><br><span class="line">        .then(<span class="function"><span class="params">()</span> =&gt;</span> callAPromise())</span><br><span class="line">        .then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"oops"</span>);</span><br><span class="line">        &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">makeRequest().catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">    <span class="comment">// output</span></span><br><span class="line">    <span class="comment">// Error: oops at callAPromise.then.then.then.then.then (index.js:8:13)</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>  async/await中的错误栈会指向错误所在的函数。在开发环境中，这一点优势并不大。但是，当你分析生产环境的错误日志时，它将非常有用。这时，知道错误发生在makeRequest比知道错误发生在then链中要好。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> makeRequest = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">await</span> callAPromise()</span><br><span class="line">    <span class="keyword">await</span> callAPromise()</span><br><span class="line">    <span class="keyword">await</span> callAPromise()</span><br><span class="line">    <span class="keyword">await</span> callAPromise()</span><br><span class="line">    <span class="keyword">await</span> callAPromise()</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"oops"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">makeRequest().catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">    <span class="comment">// output</span></span><br><span class="line">    <span class="comment">// Error: oops at makeRequest (index.js:7:9)</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>6.调试<br>　 async/await能够使得代码调试更简单。2个理由使得调试Promise变得非常痛苦:</p>
+<p>　　　《1》不能在返回表达式的箭头函数中设置断点<br>　　　《2》如果你在.then代码块中设置断点，使用Step Over快捷键，调试器不会跳到下一个.then，因为它只会跳过异步代码。</p>
+<p>　　使用await/async时，你不再需要那么多箭头函数，这样你就可以像调试同步代码一样跳过await语句。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/20/promise%E8%AF%A6%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1306,7 +1536,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1317,7 +1547,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1328,7 +1558,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1422,7 +1652,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共11.1k字</span>
+  <span class="post-count">博客全站共11.9k字</span>
 </div>
 
 
