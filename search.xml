@@ -147,11 +147,6 @@
       </tags>
   </entry>
   <entry>
-    <title>初探uni-app</title>
-    <url>/2021/04/14/%E5%88%9D%E6%8E%A2uni-app/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>初探Taro</title>
     <url>/2021/04/14/%E5%88%9D%E6%8E%A2Taro/</url>
     <content><![CDATA[<h1 id="Taro介绍"><a href="#Taro介绍" class="headerlink" title="Taro介绍"></a>Taro介绍</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Taro 是一个开放式跨端跨框架解决方案，如今端的形态多种多样，Web、React-Native、微信小程序、各大平台小程序等，如果针对不同的端去编写多套代码的成本显然非常高； </span><br><span class="line"></span><br><span class="line">此时使用 Taro，我们可以只书写一套代码，再通过 Taro 的编译工具，将源代码分别编译出可以在不同端（微信/京东/百度/支付宝/字节跳动/QQ小程序、快应用、H5、React-Native 等）运行的代码。</span><br><span class="line"></span><br><span class="line">[官方UI框架](https://taro-ui.jd.com/#/)</span><br></pre></td></tr></table></figure>
