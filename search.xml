@@ -191,9 +191,9 @@
       </tags>
   </entry>
   <entry>
-    <title>...扩展运算符1</title>
+    <title>...扩展运算符</title>
     <url>/2018/03/21/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<h3 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h3><p>  扩展运算符（spread）是三个点（…）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列。</p>
+    <content><![CDATA[<h3 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h3><p>  扩展运算符（spread）是三个点（…）。它好比 rest 参数的逆运算，将一个数组转为用逗号分隔的参数序列11。</p>
 <p>  该运算符主要用于函数调用。</p>
 <p>  扩展运算符后面还可以放置表达式。</p>
   <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> arr = [</span><br><span class="line">  ...(x &gt; <span class="number">0</span> ? [<span class="string">'a'</span>] : []),</span><br><span class="line">  <span class="string">'b'</span>,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
