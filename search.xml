@@ -1,6 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>react-native快速上手</title>
+    <url>/2021/04/14/react-native%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</url>
+    <content><![CDATA[<h1 id="React-Native-简述"><a href="#React-Native-简述" class="headerlink" title="React Native 简述"></a>React Native 简述</h1><p>Facebook 在 2015 年就开源了 React Native,目前仍然一直再维护和使用中，核心为使用 <code>React</code>技术栈 来创建 <code>Android</code> 和 <code>iOS</code> 的原生应用，将 React 基础抽象组件渲染为原生平台 UI 组件</p>
+<p>React Native 采用了 JavaScriptCore 作为 JS VM，中间通过 JSON 文件与 Bridge 进行通信,其实也是 Hybrid 的一种</p>
+<p>流程：React =&gt; JavaScriptCore =&gt; Native</p>
+<p>中间层涉及到的</p>
+<ul>
+<li>Fabric：React Native 的 UI 层重构</li>
+<li>TurboModules：与 React Native Modules 相关，基于 JSI</li>
+<li>JSI：JavaScript 与 Java/ObjeC/C++ 相互调用的一种机制</li>
+</ul>
+<h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><ul>
+<li><p>热重载</p>
+<p>热重载允许开发人员将新代码直接注入正在运行的应用程序中，从而加快了开发过程。因此，开发人员可以立即看到更改，而无需重建应用程序。 热重载还[保留了应用程序的状态]，避免了在完全重载期间丢失它的风险（在基于状态的框架中这是一项关键优势），从而进一步加快了应用程序的开发速度。</p>
+</li>
+<li><p>一个代码库，两个移动平台（以及更多 WEB,TV,Windows）</p>
+<p>编写单个代码库为 2 个应用程序提供动力-涵盖 Android 和 iOS 平台。 更妙的是，JavaScript 通过与 Web 应用程序共享代码，在编写跨平台应用程序时为您提供了帮助。这是通过创建可编译为目标平台的抽象组件来完成的。</p>
+</li>
+<li><p>相对成熟度</p>
+<p>官方的 React Native 版本是 2015 年前发布的，因此 Facebook 团队有足够的时间来稳定 API，并专注于解决问题和解决问题。</p>
+</li>
+<li><p>活跃社区</p>
+<p>React Native 有庞大的开发者社区。</p>
+</li>
+<li><p>统一的 react 技术栈</p>
+</li>
+</ul>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>下面以 macOs 为例子，window，Linux 类似查看相关文档<a href="https://reactnative.cn/docs/environment-setup" target="_blank" rel="noopener">传送门</a></p>
+<blockquote>
+<p>在开始环境搭建前建议用 2 分钟简要浏览本 ReactGuide 第一章节<a href="http://wiki.bigeye.top/document/index?document_id=136" target="_blank" rel="noopener" title="《基础开发环境》">《基础开发环境》</a></p>
+</blockquote>
+<h3 id="开发-Android"><a href="#开发-Android" class="headerlink" title="开发 Android"></a>开发 Android</h3><p>必须安装的依赖有：Node、JDK 和 Android Studio。</p>
+<blockquote>
+<p>强烈建议使用 nvm 管理 node。Homebrew 和 nvm 的安装使用请看<a href="http://wiki.bigeye.top/document/index?document_id=136" target="_blank" rel="noopener" title="这里">这里</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Homebrew</span></span><br><span class="line">brew install node <span class="comment"># 安装node</span></span><br><span class="line">brew install watchman <span class="comment"># 安装watchman</span></span><br><span class="line">brew cask install adoptopenjdk/openjdk/adoptopenjdk8 <span class="comment"># 安装JDK 暂不支持 1.9 及更高版本，注意 1.8 版本官方也直接称 8 版本</span></span><br></pre></td></tr></table></figure>
+
+<p>安装 Android Studio <a href="https://developer.android.google.cn/studio/" target="_blank" rel="noopener">传送门</a></p>
+<p>安装界面中选择”Custom”选项，确保选中了以下几项：</p>
+<ul>
+<li><p>Android SDK</p>
+</li>
+<li><p>Android SDK Platform</p>
+</li>
+<li><p>Android Virtual Device</p>
+</li>
+</ul>
+<h3 id="开发-iOS"><a href="#开发-iOS" class="headerlink" title="开发 iOS"></a>开发 iOS</h3><p>必须安装的依赖有：Node、Watchman、Xcode 和 CocoaPods。</p>
+<blockquote>
+<p>强烈建议使用 nvm 管理 node。Homebrew 和 nvm 的安装使用请看<a href="http://wiki.bigeye.top/document/index?document_id=136" target="_blank" rel="noopener" title="这里">这里</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Homebrew</span></span><br><span class="line">brew install node <span class="comment"># 安装node</span></span><br><span class="line">brew install watchman <span class="comment"># 安装watchman</span></span><br><span class="line">brew install cocoapods <span class="comment">#  CocoaPods是用 Ruby 编写的包管理器（可以理解为针对 iOS 的 npm）用来管理依赖</span></span><br></pre></td></tr></table></figure>
+
+<p>安装 Xcode (去 App Store 或者 <a href="https://developer.apple.com/xcode/downloads/" target="_blank" rel="noopener">Apple 开发者官网</a>)</p>
+<blockquote>
+<p>注：新版 Xcode 需要更新 macOS 版本</p>
+</blockquote>
+<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx react-native init myapp <span class="comment"># npm 从5.2版开始，增加了 npx 命令,主要用来调用项目内部安装的模块</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> myapp</span><br><span class="line">yarn ios</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">yarn react-native run-ios</span><br></pre></td></tr></table></figure>
+
+<p>运行 <code>yarn ios</code>会对项目的原生部分进行编译，同时在另外一个命令行中启动 Metro 服务对 js 代码进行实时打包处理（类似 webpack）。Metro 服务也可以使用 yarn start 命令单独启动。</p>
+<p>metro 是一种支持 ReactNative 的打包工具</p>
+<blockquote>
+<p>注：如果长时间无响应建议切换 npm 下载源 <code>npm config set registry http://registry.npm.taobao.org/</code> 如果切换完下载源仍然无法响应可以先下载 <code>react-native</code> 再执行 <code>react-native init AwesomeProject</code></p>
+</blockquote>
+<h1 id="目录结构（个人暂定）"><a href="#目录结构（个人暂定）" class="headerlink" title="目录结构（个人暂定）"></a>目录结构（个人暂定）</h1><ul>
+<li>src (开发统一源码目录)<ul>
+<li>api ( HTTP 接口，网络请求服务相关 )</li>
+<li>components (组件类)</li>
+<li>views (视图类)</li>
+<li>utils (基础工具类)</li>
+<li>assets (资源类)</li>
+<li>router (路由类包含 tabbar，抽屉等)</li>
+<li>index.js (程序入口)</li>
+<li>Splash.js （闪屏）</li>
+</ul>
+</li>
+</ul>
+<h1 id="react-native-规则"><a href="#react-native-规则" class="headerlink" title="react native 规则"></a>react native 规则</h1><ul>
+<li>不管组件中是否用到 react 都必须引入，否则会报错。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当我们开发时，需要调用的原生组件都是通过 react-native 引入。</li>
+<li>其他使用基本同 React 和 JSX 语法一样。</li>
+</ul>
+<h1 id="常用组件"><a href="#常用组件" class="headerlink" title="常用组件"></a>常用组件</h1><ul>
+<li>View： 属于容器组件。只能用于组件嵌套。</li>
+<li>Text： 文本必须写在 Text,否则报错。会自动换行。设置行数（numberOflines = {3}）更多功能 请查找 API.</li>
+<li>Image: 凡是 uri: 加载必须设置高度和宽度。</li>
+<li>ImageBackground 作为背景图片。可以作为容器。</li>
+<li>Textinput 边框必须设置宽度不然没有颜色。multiline 多行输入。</li>
+<li>一般用 TouchableOpacity 进行封装按钮 Button 在 IOS 是白色。</li>
+<li>ScrollView 组件滚动视图 水平方向 horizontal：true; 滚动, 数据多的话滚动会卡顿。</li>
+<li>FlatList 适合做滚动列表。它里面根据 key 做优化了，做了重用机制，优化性能。</li>
+<li>官方推荐使用 fetch 来获取数据。我们也可以用 axios 来获取。</li>
+</ul>
+<h1 id="Style"><a href="#Style" class="headerlink" title="Style"></a>Style</h1><p>RN 布局统一采用 flex ，<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">传送门</a></p>
+<p>样式名基本上是遵循了 web 上的 CSS 的命名，只是按照 JS 的语法要求使用了驼峰命名法，例如将 background-color 改为 backgroundColor。 样式可以写成内联样式,也可以通过一个变量接收 StyleSheet.create({….})来创建你想要的样式。单位的话不需要加，直接写数字，表示的是与设备像素密度无关的逻辑像素点,通过下面方法可以取到相关尺寸。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Dimensions, StatusBar, PixelRatio &#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;</span><br><span class="line"><span class="comment">// PixelRatio：可以获取到设备的像素密度和字体缩放比。</span></span><br><span class="line"><span class="comment">// Dimensions:  来获取设备的宽高</span></span><br><span class="line"><span class="comment">// StatusBar:控制应用状态栏的组件,可以获取相关尺寸</span></span><br><span class="line"><span class="keyword">const</span> windowWidth = Dimensions.get(<span class="string">'window'</span>).width;</span><br><span class="line"><span class="keyword">const</span> windowHeight = Dimensions.get(<span class="string">'window'</span>).height;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://github.com/doyoe/react-native-stylesheet-guide" target="_blank" rel="noopener">文档参考</a></p>
+<h1 id="关于静态图片资源"><a href="#关于静态图片资源" class="headerlink" title="关于静态图片资源"></a>关于静态图片资源</h1><p>目前原生支持的图片格式有 png、jpg、jpeg、bmp、gif、webp (仅 Android)、psd (仅 iOS)。</p>
+<p>可以使用@2x，@3x 这样的文件名后缀，来为不同的屏幕精度提供图片,Packager 会打包所有的图片并且依据屏幕精度提供对应的资源</p>
+<p>默认情况下 Android 是不支持 GIF 和 WebP 格式的。你需要在 android/app/build.gradle 文件中根据需要手动添加以下模块：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">  <span class="comment">// 如果你需要支持Android4.0(API level 14)之前的版本</span></span><br><span class="line">  implementation <span class="string">'com.facebook.fresco:animated-base-support:1.3.0'</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 如果你需要支持GIF动图</span></span><br><span class="line">  implementation <span class="string">'com.facebook.fresco:animated-gif:2.0.0'</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 如果你需要支持WebP格式，包括WebP动图</span></span><br><span class="line">  implementation <span class="string">'com.facebook.fresco:animated-webp:2.1.0'</span></span><br><span class="line">  implementation <span class="string">'com.facebook.fresco:webpsupport:2.0.0'</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 如果只需要支持WebP格式而不需要动图</span></span><br><span class="line">  implementation <span class="string">'com.facebook.fresco:webpsupport:2.0.0'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;Image source=&#123;<span class="built_in">require</span>(<span class="string">'./my-icon.png'</span>)&#125; /&gt;</span><br><span class="line">&lt;Image source=&#123;&#123;<span class="attr">uri</span>: <span class="string">'https://reactnative.dev/img/tiny_logo.png'</span>&#125;&#125;/&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="React-Native-0-60-Autolinking-第三方库使用"><a href="#React-Native-0-60-Autolinking-第三方库使用" class="headerlink" title="React Native 0.60 Autolinking(第三方库使用)"></a>React Native 0.60 Autolinking(第三方库使用)</h1><p>旧版第三方依赖库是需要执行 <code>react-native link</code> 来关联原生程序，新版 0.6 以后统一使用 <code>cd ios &amp;&amp; pod install &amp;&amp; cd ..</code></p>
+<p>有了 <code>autolinking</code> 特性后，我们不需要再手动执行 <code>link</code> 命令来链接原生库。但是在 <code>ios</code> 平台上，我们需要使用 <code>pod install</code> 命令来安装原生依赖。也就是说，在安卓平台上，RN 会自动帮我们处理原生依赖，ios 则使用了 pod 来管理。</p>
+<h1 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h1><p>React Native 推荐使用 <code>fetch</code>，当然也支持 xhr ，和 axios 库</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank" rel="noopener">fetch 文档</a></p>
+<p>支持 WebSocket</p>
+<h1 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn add @react-navigation/native</span><br></pre></td></tr></table></figure>
+
+<p>文档地址：<a href="https://reactnavigation.org/" target="_blank" rel="noopener">https://reactnavigation.org/</a></p>
+<h1 id="多环境配置"><a href="#多环境配置" class="headerlink" title="多环境配置"></a>多环境配置</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn add react-native-config</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>开发 iOS 记得执行上面 cd ios &amp;&amp; pod install 关联程序根目录配置文件：</p>
+</blockquote>
+<ul>
+<li><p>.env.development（开发）</p>
+</li>
+<li><p>.env.release（测试）</p>
+</li>
+<li><p>.env.production（生产）</p>
+<p><a href="https://www.dazhuanlan.com/2019/12/27/5e059d94b0a42/" target="_blank" rel="noopener">参考教程</a></p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Config <span class="keyword">from</span> <span class="string">'react-native-config</span></span><br><span class="line"><span class="string">// Config 对象即为根配置环境参数</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="构建-APP"><a href="#构建-APP" class="headerlink" title="构建 APP"></a>构建 APP</h1>]]></content>
+      <categories>
+        <category>app</category>
+        <category>react</category>
+      </categories>
+      <tags>
+        <tag>多端框架</tag>
+        <tag>react</tag>
+        <tag>app</tag>
+        <tag>react-native</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>初探uni-app</title>
     <url>/2021/04/14/%E5%88%9D%E6%8E%A2uni-app/</url>
     <content><![CDATA[]]></content>
@@ -88,6 +234,8 @@
       <tags>
         <tag>多端框架</tag>
         <tag>小程序</tag>
+        <tag>react</tag>
+        <tag>taro</tag>
       </tags>
   </entry>
   <entry>
